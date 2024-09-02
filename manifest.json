@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "GitHub Repository Notes",
+    "version": "1.0",
+    "description": "Add notes to your starred GitHub repositories",
+    "permissions": ["storage", "activeTab"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://github.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
